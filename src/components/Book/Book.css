@@ -88,3 +88,7 @@ button {
   height: 15vh;
   margin-left: 40px;
 }
+
+.remove-btn {
+  width: 30%;
+}
