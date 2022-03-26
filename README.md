@@ -1,16 +1,18 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Title-Info
-> This is a project.......
+> This is a Book Store project where we can see choose a book, a category and see the writer and our reading progress.
 
 # GIF/Screenshot
-![]()
+![](gif-2.gif)
 
 ## Built With
 - React
+- React-Router
+- FontAwesome
 
 ## Live Demo
-For the link to the live demo, [Click here]()
+For the link to the live demo, [Click here](https://benevolent-melomakarona-75d9f6.netlify.app/)
 
 ## Getting Started
 To get a local copy up and running you just need to follow the following steps;
@@ -41,9 +43,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- [Zeplin Project](https://app.zeplin.io/project/5b35a9e13227086040f8eb75/screen/5b695e29bb8c844f118f9378)
 
 ## 📝 License
 
