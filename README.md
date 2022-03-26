@@ -1,7 +1,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Title-Info
-> This is a Book Store project where we can see choose a book, a category and see the writer and our reading progress.
+> This is a Book Store web app where we can choose a book, a category and see the writer and our reading progress.
 
 # GIF/Screenshot
 ![](gif-2.gif)
