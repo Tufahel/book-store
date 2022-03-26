@@ -22,6 +22,7 @@ function Book(props) {
         <p className="completed">Completed</p>
         </div>
       </div>
+      <div className="grid-item vl"></div>
       <div className="grid-item items-3">
         <p className="current">Current Progress</p>
         <p>{chapter}</p>

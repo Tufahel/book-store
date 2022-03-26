@@ -8,3 +8,8 @@
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   }
+
+.hr {
+    border-top: 2px solid rgb(196, 194, 194);
+    margin: 2.3rem 6.3rem;
+}

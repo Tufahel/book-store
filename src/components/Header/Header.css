@@ -4,14 +4,29 @@ body {
 .header-body {
     margin: 0 0 2.375rem;
     background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-
 nav {
     display: flex;
     justify-content: left;
     align-items: center;
     margin: 1.813rem 0rem 1.813rem 6.25rem;
 }
+.fa-icon {
+    color: #0290ff;
+    padding: 7px;
+}
+.center {
+    background: #fff;
+    border: 1px solid gray;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 6.25rem;
+  }
 .header {
   width: 15rem;
   height: 2.313rem;

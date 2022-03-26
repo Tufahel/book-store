@@ -1,3 +1,5 @@
+import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
@@ -9,13 +11,16 @@ function Header() {
         <h1 className="header">BookStore CMS</h1>
         <ul className="links">
           <li>
-            <Link to="/books" className="link1 link">Books</Link>
+            <Link to="/" className="link1 link">Books</Link>
           </li>
           <li>
             <Link to="/categories" className="link2 link">Categories</Link>
           </li>
         </ul>
       </nav>
+      <div className="center">
+        <FontAwesomeIcon className="fa-icon" icon={faUser} />
+      </div>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 .grid-container {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 1.5fr 1.5fr 0.5fr 1fr;
   padding: 2rem 1.68rem;
   align-items: center;
 }
@@ -79,3 +79,9 @@ button {
     border-radius: 5px;
     border-style: none;
 }
+
+.vl {
+    border-left: 2px solid rgb(196, 194, 194);
+    height: 15vh;
+    margin-left: 40px;
+  }
