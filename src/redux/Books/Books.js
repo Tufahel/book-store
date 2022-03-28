@@ -1,20 +1,52 @@
-import React from 'react';
-import AddBook from '../../components/AddBook/AddBook';
-import Book from '../../components/Book/Book';
-import './Books.css';
+/* eslint-disable import/prefer-default-export */
+/* eslint-disable no-undef */
 
-function Books() {
-  return (
-    <div>
-      <div>
-        <div className="card"><Book title="The Hunger Games" author="Suzane Collins" category="Action" progress="64" chapter="Chapter 17" /></div>
-        <div className="card"><Book title="Dune" author="Frank Herbert" category="Science Fiction" progress="8" chapter="Chapter 3: A Lesson Learned" /></div>
-        <div className="card"><Book title="Capital in the Twenty-First Century" author="Suzane Collins" category="Economy" progress="0" chapter="Introduction" /></div>
-      </div>
-      <div className="hr"> </div>
-      <AddBook />
-    </div>
-  );
-}
+export const addBook = (author, title) => ({
+  type: 'ADD_BOOK',
+  payload: {
+    id: new Date().getTime().toString(),
+    author,
+    title,
+  },
+});
 
-export default Books;
+export const removeBook = (id) => ({
+  type: 'REMOVE_BOOK',
+  id,
+});
+
+/* eslint-disable default-param-last */
+/* eslint-disable no-case-declarations */
+
+const initialData = {
+  list: [],
+};
+
+const booksReducers = (state = initialData, action) => {
+  switch (action.type) {
+    case 'ADD_BOOK':
+
+      const { id, author, title } = action.payload;
+      return {
+        ...state,
+        list: [
+          ...state.list,
+          {
+            id,
+            author,
+            title,
+          },
+        ],
+      };
+    case 'REMOVE_BOOK':
+
+      const newList = state.list.filter((elem) => elem.id !== action.id);
+      return {
+        ...state,
+        list: newList,
+      };
+    default: return state;
+  }
+};
+
+export default booksReducers;
