@@ -1,6 +1,6 @@
 import React from 'react';
-import AddBook from '../AddBook/AddBook';
-import Book from '../Book/Book';
+import AddBook from '../../components/AddBook/AddBook';
+import Book from '../../components/Book/Book';
 import './Books.css';
 
 function Books() {
