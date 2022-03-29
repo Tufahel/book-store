@@ -19,6 +19,7 @@ function AddBook() {
               name="title"
               placeholder="Book Name...."
               onChange={(e) => setTitle(e.target.value)}
+              required
             />
           </label>
           <label htmlFor="author">
@@ -28,6 +29,7 @@ function AddBook() {
               name="author"
               placeholder="Author..."
               onChange={(e) => setAuthor(e.target.value)}
+              required
             />
           </label>
           <button

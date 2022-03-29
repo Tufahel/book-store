@@ -2,8 +2,8 @@ import React from 'react';
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import './Book.css';
+import PropTypes from 'prop-types';
 
-/* eslint-disable react/prop-types */
 function Book(props) {
   const {
     title, author, category, progress, chapter,
@@ -36,5 +36,13 @@ function Book(props) {
     </div>
   );
 }
+
+Book.propTypes = {
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
+  progress: PropTypes.number.isRequired,
+  chapter: PropTypes.string.isRequired,
+};
 
 export default Book;

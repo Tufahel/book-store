@@ -1,8 +1,8 @@
-/* eslint-disable import/prefer-default-export */
-/* eslint-disable no-undef */
+const ADD_BOOK = 'addBook';
+const REMOVE_BOOK = 'removeBook';
 
 export const addBook = (author, title) => ({
-  type: 'ADD_BOOK',
+  type: ADD_BOOK,
   payload: {
     id: new Date().getTime().toString(),
     author,
@@ -11,12 +11,9 @@ export const addBook = (author, title) => ({
 });
 
 export const removeBook = (id) => ({
-  type: 'REMOVE_BOOK',
+  type: REMOVE_BOOK,
   id,
 });
-
-/* eslint-disable default-param-last */
-/* eslint-disable no-case-declarations */
 
 const initialData = {
   list: [],
@@ -24,26 +21,24 @@ const initialData = {
 
 const booksReducers = (state = initialData, action) => {
   switch (action.type) {
-    case 'ADD_BOOK':
+    case ADD_BOOK:
 
-      const { id, author, title } = action.payload;
       return {
         ...state,
         list: [
           ...state.list,
           {
-            id,
-            author,
-            title,
+            id: action.payload.id,
+            author: action.payload.author,
+            title: action.payload.title,
           },
         ],
       };
-    case 'REMOVE_BOOK':
+    case REMOVE_BOOK:
 
-      const newList = state.list.filter((elem) => elem.id !== action.id);
       return {
         ...state,
-        list: newList,
+        list: state.list.filter((elem) => elem.id !== action.id),
       };
     default: return state;
   }
