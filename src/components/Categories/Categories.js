@@ -11,7 +11,7 @@ function Categories() {
       <button
         className="category-btn"
         type="button"
-        onClick={() => dispatch(addCategory('Under Construction'))}
+        onClick={() => dispatch(addCategory())}
       >
         {state}
       </button>
