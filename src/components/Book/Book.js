@@ -33,7 +33,6 @@ function Book(props) {
         <p>{chapter}</p>
         <button type="button">Update Progress</button>
       </div>
-      <button type="button" className="remove-btn">Remove</button>
     </div>
   );
 }

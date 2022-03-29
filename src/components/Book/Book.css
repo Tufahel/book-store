@@ -1,12 +1,12 @@
 .grid-container {
   display: grid;
   grid-template-columns: 1.5fr 1.5fr 0.5fr 1fr;
-  padding: 2rem 1.68rem;
+  padding: 0rem 1.68rem;
   align-items: center;
 }
 
 .grid-item {
-  padding: 10px;
+  padding: 0px 10px;
   gap: 0.2525rem;
   font-family: RobotoSlab, sans-serif;
 }
@@ -87,8 +87,4 @@ button {
   border-left: 2px solid rgb(196 194 194);
   height: 15vh;
   margin-left: 40px;
-}
-
-.remove-btn {
-  width: 40%;
 }
