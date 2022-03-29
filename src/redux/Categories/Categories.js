@@ -1,4 +1,4 @@
-const CHECK_STATUS = 'checkStatus';
+const CHECK_STATUS = 'bookstore/categoires/CHECK_STATUS';
 const initialData = [];
 
 export const addCategory = () => ({
