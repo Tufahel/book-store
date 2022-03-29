@@ -1,12 +1,12 @@
 .grid-container {
   display: grid;
   grid-template-columns: 1.5fr 1.5fr 0.5fr 1fr;
-  padding: 0rem 1.68rem;
+  padding: 0 1.68rem;
   align-items: center;
 }
 
 .grid-item {
-  padding: 0px 10px;
+  padding: 0 10px;
   gap: 0.2525rem;
   font-family: RobotoSlab, sans-serif;
 }

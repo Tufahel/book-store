@@ -1,3 +1,5 @@
-.category-btn {
-  margin-left: 6.3rem;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
