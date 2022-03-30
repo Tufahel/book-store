@@ -13,6 +13,7 @@ function Categories() {
         type="button"
         onClick={() => dispatch(addCategory())}
       >
+        Check Status
         {state}
       </button>
     </div>
