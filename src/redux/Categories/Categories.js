@@ -8,7 +8,7 @@ export const addCategory = () => ({
 const categoriesReducer = (state = initialData, action) => {
   switch (action.type) {
     case CHECK_STATUS:
-      return 'Under Construction';
+      return ': Under Construction! Please Come Back Later.';
     default:
       return state;
   }
