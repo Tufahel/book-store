@@ -24,14 +24,16 @@ function Books() {
       <div>
         {
           list.map((elem) => (
-            <div key={elem.id}>
+            <div key={elem.item_id}>
               <div className="card">
-                <Book title={elem.title} author={elem.author} category="Action" progress="64" chapter="Chapter 17" />
+                <Book title={elem.title} author={elem.author} category={elem.category} progress="64" chapter="Chapter 17" />
                 <button
-                  key={elem.id}
+                  key={elem.item_id}
                   type="button"
                   className="remove-btn"
-                  onClick={(event) => { event.preventDefault(); dispatch(removeBook(elem.id)); }}
+                  onClick={() => {
+                    dispatch(removeBook(elem.item_id));
+                  }}
                 >
                   Remove Book
                 </button>
