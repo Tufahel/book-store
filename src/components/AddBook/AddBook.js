@@ -34,26 +34,20 @@ function AddBook() {
             />
           </label>
           <label htmlFor="category">
-            <select
+            <input
               name="category"
-              id="category"
-              size="2"
-              onChange={(e) => setCategory(e.target.value)}
-              multiple
-            >
-              <option value="Action">Action</option>
-              <option value="Phylosophy">Phylosophy</option>
-              <option value="Fiction">Fiction</option>
-              <option value="Non-fiction">Non Fiction</option>
-            </select>
-            {/* <input
               type="text"
-              id="category"
-              name="category"
-              placeholder="Category..."
+              placeholder="Category"
+              list="category"
               onChange={(e) => setCategory(e.target.value)}
               required
-            /> */}
+            />
+            <datalist id="category">
+              <option value="Action">Action</option>
+              <option value="Fiction">Fiction</option>
+              <option value="Non Fiction">Non Fiction</option>
+              <option value="Phylosophy">Phylosophy</option>
+            </datalist>
           </label>
           <button
             type="submit"

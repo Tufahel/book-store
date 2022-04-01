@@ -14,7 +14,7 @@ form {
 
 .inputs {
   display: grid;
-  grid-template-columns: 2fr 1fr 0.5fr;
+  grid-template-columns: 1.5fr 1fr 0.5fr 0.5fr;
 }
 
 input {
