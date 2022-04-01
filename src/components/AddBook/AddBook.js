@@ -6,6 +6,7 @@ import { addBook } from '../../redux/Books/Books';
 function AddBook() {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
+  const [category, setCategory] = useState('');
   const dispatch = useDispatch();
   return (
     <div>
@@ -27,14 +28,30 @@ function AddBook() {
               type="text"
               id="author"
               name="author"
-              placeholder="Author..."
+              placeholder="Author Name...."
               onChange={(e) => setAuthor(e.target.value)}
               required
             />
           </label>
+          <label htmlFor="category">
+            <input
+              name="category"
+              type="text"
+              placeholder="Category"
+              list="category"
+              onChange={(e) => setCategory(e.target.value)}
+              required
+            />
+            <datalist id="category">
+              <option value="Action">Action</option>
+              <option value="Fiction">Fiction</option>
+              <option value="Non Fiction">Non Fiction</option>
+              <option value="Phylosophy">Phylosophy</option>
+            </datalist>
+          </label>
           <button
             type="submit"
-            onClick={(event) => { event.preventDefault(); dispatch(addBook(author, title), setAuthor(''), setTitle('')); }}
+            onClick={(event) => { event.preventDefault(); dispatch(addBook(title, author, category), setAuthor(''), setTitle('')); }}
           >
             Add Book
           </button>

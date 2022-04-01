@@ -1,19 +1,32 @@
-const ADD_BOOK = 'bookstore/books/ADD_BOOK';
-const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
+import { postBook, fetchBook, deleteBook } from '../../api/Api';
 
-export const addBook = (author, title) => ({
-  type: ADD_BOOK,
-  payload: {
-    id: new Date().getTime().toString(),
-    author,
-    title,
-  },
-});
+const ADD_BOOK = 'book-store/books/ADD_BOOK';
+const REMOVE_BOOK = 'book-store/books/REMOVE_BOOK';
+const GET_BOOKS = 'book-store/books/GET_BOOKS';
 
-export const removeBook = (id) => ({
-  type: REMOVE_BOOK,
-  id,
-});
+export const addBook = (title, author, category) => async (dispatch) => {
+  const id = new Date().getTime().toString();
+  await postBook(id, title, author, category);
+  dispatch({
+    type: ADD_BOOK,
+    payload: {
+      item_id: id,
+      title,
+      author,
+      category,
+    },
+  });
+};
+
+export const getBooks = () => async (dispatch) => {
+  const book = await fetchBook();
+  dispatch({ type: GET_BOOKS, payload: book });
+};
+
+export const removeBook = (id) => async (dispatch) => {
+  await deleteBook(id);
+  dispatch({ type: REMOVE_BOOK, payload: id });
+};
 
 const initialData = {
   list: [],
@@ -28,17 +41,23 @@ const booksReducers = (state = initialData, action) => {
         list: [
           ...state.list,
           {
-            id: action.payload.id,
-            author: action.payload.author,
+            item_id: action.payload.item_id,
             title: action.payload.title,
+            author: action.payload.author,
+            category: action.payload.category,
           },
         ],
       };
+
+    case GET_BOOKS:
+
+      return [...state, action.payload];
+
     case REMOVE_BOOK:
 
       return {
         ...state,
-        list: state.list.filter((elem) => elem.id !== action.id),
+        list: state.list.filter((elem) => elem.item_id !== action.payload),
       };
     default: return state;
   }

@@ -41,7 +41,7 @@ Book.propTypes = {
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
-  progress: PropTypes.number.isRequired,
+  progress: PropTypes.string.isRequired,
   chapter: PropTypes.string.isRequired,
 };
 
