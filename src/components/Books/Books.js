@@ -8,6 +8,8 @@ import './Books.css';
 function Books() {
   const list = useSelector((state) => state.booksReducers.list);
   const dispatch = useDispatch();
+  const randomNumber = Math.floor((Math.random() * 100) + 1);
+  const stringRandom = randomNumber.toString();
   return (
     <div>
       <div>
@@ -26,7 +28,7 @@ function Books() {
           list.map((elem) => (
             <div key={elem.item_id}>
               <div className="card">
-                <Book title={elem.title} author={elem.author} category={elem.category} progress="64" chapter="Chapter 17" />
+                <Book title={elem.title} author={elem.author} category={elem.category} progress={stringRandom} chapter="Chapter 17" />
                 <button
                   key={elem.item_id}
                   type="button"
