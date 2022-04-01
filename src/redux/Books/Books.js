@@ -1,8 +1,8 @@
-import { postBook, getBook, deleteBook } from '../../api/Api';
+import { postBook, fetchBook, deleteBook } from '../../api/Api';
 
 const ADD_BOOK = 'book-store/books/ADD_BOOK';
 const REMOVE_BOOK = 'book-store/books/REMOVE_BOOK';
-const GET_BOOKS = 'book-store/books/GET_BOOK';
+const GET_BOOKS = 'book-store/books/GET_BOOKS';
 
 export const addBook = (title, author, category) => async (dispatch) => {
   const id = new Date().getTime().toString();
@@ -19,7 +19,7 @@ export const addBook = (title, author, category) => async (dispatch) => {
 };
 
 export const getBooks = () => async (dispatch) => {
-  const book = await getBook();
+  const book = await fetchBook();
   dispatch({ type: GET_BOOKS, payload: book });
 };
 
