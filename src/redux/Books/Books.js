@@ -4,9 +4,9 @@ const ADD_BOOK = 'book-store/books/ADD_BOOK';
 const REMOVE_BOOK = 'book-store/books/REMOVE_BOOK';
 const GET_BOOKS = 'book-store/books/GET_BOOK';
 
-export const addBook = (title, category, author) => async (dispatch) => {
+export const addBook = (title, author, category) => async (dispatch) => {
   const id = new Date().getTime().toString();
-  await postBook(id, title, category, author);
+  await postBook(id, title, author, category);
   dispatch({
     type: ADD_BOOK,
     payload: {
@@ -41,7 +41,7 @@ const booksReducers = (state = initialData, action) => {
         list: [
           ...state.list,
           {
-            id: action.payload.item_id,
+            item_id: action.payload.item_id,
             title: action.payload.title,
             author: action.payload.author,
             category: action.payload.category,
@@ -51,13 +51,13 @@ const booksReducers = (state = initialData, action) => {
 
     case GET_BOOKS:
 
-      return [...state];
+      return [...state, action.payload];
 
     case REMOVE_BOOK:
 
       return {
         ...state,
-        list: state.list.filter((elem) => elem.item_id !== action.item_id),
+        list: state.list.filter((elem) => elem.item_id !== action.payload),
       };
     default: return state;
   }

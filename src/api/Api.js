@@ -26,6 +26,5 @@ export const deleteBook = async (id) => {
       item_id: id,
     }),
   });
-  console.log(res.text());
   return res.text();
 };
