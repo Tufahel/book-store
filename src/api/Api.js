@@ -1,7 +1,6 @@
 const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/FN12ot9XO2ctzueymCoY/books';
 export const fetchBook = async () => {
   const res = await fetch(url);
-  console.log(res.json());
   return res.json();
 };
 export const postBook = async (id, title, author, category) => {
