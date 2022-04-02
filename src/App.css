@@ -1,7 +1,4 @@
 body {
   background-color: white;
-}
-
-button {
-  cursor: pointer;
+  font-family: RobotoSlab, sans-serif;
 }

@@ -1,54 +1,14 @@
-.grid-container {
-  display: grid;
-  grid-template-columns: 1.5fr 1.5fr 0.5fr 1fr;
-  padding: 0 1.68rem;
-  align-items: center;
-}
-
-.grid-item {
-  padding: 0 10px;
-  gap: 0.2525rem;
-  font-family: RobotoSlab, sans-serif;
-}
-
-.items-1 {
-  display: flex;
-  flex-direction: column;
-  justify-self: left;
-  text-align: left;
-  font-weight: bold;
-}
-
-.items-1 h2 {
-  margin: 0.188rem 0 0;
-  font-size: 1.375rem;
-  color: #121212;
-}
-
-.items-1 p {
-  font-size: 0.875rem;
-  color: #121212;
-  opacity: 0.5;
-  font-family: Montserat, sans-serif;
-}
-
-.items-1 .author {
-  color: #4386bf;
-  font-weight: 300;
-}
-
-.items-2 {
-  display: flex;
-  align-items: center;
-  font-family: Montserat, sans-serif;
-}
-
 .progress {
   text-align: left;
   color: #121212;
   margin-left: 1.35rem;
   line-height: normal;
   gap: 0.063rem;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  font-family: Montserrat, sans-serif;
 }
 
 .percent {
@@ -60,15 +20,6 @@
   opacity: 0.5;
   font-size: 0.875rem;
   margin: 0;
-}
-
-.items-3 {
-  text-align: left;
-  color: #121212;
-  margin-left: 1.35rem;
-  line-height: normal;
-  gap: 0.063rem;
-  font-family: RobotoSlab, sans-serif;
 }
 
 .current {
@@ -83,8 +34,34 @@ button {
   border-style: none;
 }
 
+.remove-btn,
+.comment-btn,
+.edit-btn,
+.line {
+  background-color: transparent;
+  color: #4386bf;
+  padding: 0;
+  margin: 30px;
+  text-align: left;
+}
+
+.line {
+  color: #121212;
+  opacity: 0.5;
+  margin: 0;
+}
+
+.author {
+  color: #4386bf;
+}
+
+.category {
+  opacity: 0.5;
+}
+
 .vl {
   border-left: 2px solid rgb(196 194 194);
-  height: 15vh;
-  margin-left: 40px;
+  height: 25vh;
+  margin-right: 40px;
+  margin-left: 20px;
 }

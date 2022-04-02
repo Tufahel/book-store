@@ -4,11 +4,13 @@
 > This is a Book Store web app where we can choose a book, a category and see the writer and our reading progress.
 
 # GIF/Screenshot
-![](gif-2.gif)
+![](gif3.gif)
 
 ## Built With
 - React
+- Redux
 - React-Router
+- Bootstrap
 - FontAwesome
 
 ## Live Demo
