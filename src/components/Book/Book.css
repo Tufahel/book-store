@@ -34,10 +34,13 @@ button {
   border-style: none;
 }
 
-.remove-btn, .comment-btn, .edit-btn, .line {
+.remove-btn,
+.comment-btn,
+.edit-btn,
+.line {
   background-color: transparent;
   color: #4386bf;
-  padding: 0px;
+  padding: 0;
   margin: 30px;
   text-align: left;
 }
@@ -45,11 +48,11 @@ button {
 .line {
   color: #121212;
   opacity: 0.5;
-  margin: 0px;
+  margin: 0;
 }
 
 .author {
-  color: #4386bf
+  color: #4386bf;
 }
 
 .category {
@@ -59,9 +62,6 @@ button {
 .vl {
   border-left: 2px solid rgb(196 194 194);
   height: 25vh;
-  margin-left: 40px;
-}
-
-.vl1 {
-  height: 10vh
+  margin-right: 40px;
+  margin-left: 20px;
 }
