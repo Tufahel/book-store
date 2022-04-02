@@ -1,5 +1,4 @@
 .form-header {
-  font-family: Montserrat, sans-serif;
   font-size: 1.25rem;
   font-weight: bold;
   color: #121212;
@@ -7,18 +6,13 @@
 }
 
 form {
+  font-family: Montserrat, sans-serif;
   text-align: left;
   padding: 0 6.25rem;
   margin-bottom: 2rem;
 }
 
-.inputs {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr 0.5fr 0.5fr;
-}
-
 input {
-  height: 4vh;
   border: none;
   padding: 5px 10px;
   margin-right: 5px;
@@ -26,15 +20,9 @@ input {
 }
 
 #title {
-  width: 90%;
+  width: 35vw;
 }
 
-#author {
-  width: 85%;
-}
-
-button {
-  font-family: RobotoSlab, sans-serif;
-  font-weight: bold;
-  width: 90%;
+#category {
+  width: 22vw;
 }
