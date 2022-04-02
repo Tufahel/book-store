@@ -34,12 +34,18 @@ button {
   border-style: none;
 }
 
-.remove-btn, .comment-btn, .edit-btn {
+.remove-btn, .comment-btn, .edit-btn, .line {
   background-color: transparent;
   color: #4386bf;
   padding: 0px;
   margin: 30px;
   text-align: left;
+}
+
+.line {
+  color: #121212;
+  opacity: 0.5;
+  margin: 0px;
 }
 
 .author {
@@ -48,4 +54,14 @@ button {
 
 .category {
   opacity: 0.5;
+}
+
+.vl {
+  border-left: 2px solid rgb(196 194 194);
+  height: 25vh;
+  margin-left: 40px;
+}
+
+.vl1 {
+  height: 10vh
 }

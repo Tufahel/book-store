@@ -33,15 +33,19 @@ function Book(props) {
             </div>
           </div>
         </div>
-        <div className="col-sm-12 col-md-4 col-lg-4 d-flex justify-content-center flex-column">
-          <p className="current">Current Progress</p>
-          <p>{chapter}</p>
-          <button type="button">Update Progress</button>
+        <div className="col-sm-12 col-md-4 col-lg-4 d-flex justify-content-around">
+          <div className="grid-item vl" />
+          <div className="d-flex justify-content-center flex-column">
+            <p className="current">Current Progress</p>
+            <p>{chapter}</p>
+            <button type="button">Update Progress</button>
+          </div>
         </div>
       </div>
       <div className="row">
         <div className="mt-2 mb-2 d-flex space-around w-50">
           <button className="comment-btn" type="button">Comment</button>
+          <button type="button" className="line">|</button>
           <button
             key={id}
             type="button"
@@ -52,6 +56,7 @@ function Book(props) {
           >
             Remove Book
           </button>
+          <button type="button" className="line">|</button>
           <button className="edit-btn" type="button">Edit</button>
         </div>
       </div>
